@@ -1,5 +1,5 @@
 h1{
-color: #42069
+color: #042069
 }
 h2{
 color: #FF0000
@@ -11,5 +11,5 @@ border-collapse: collapse;
 
 table th,
 table td{
-padding 5px;
+padding :5px;
 }

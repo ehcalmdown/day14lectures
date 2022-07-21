@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import sg.edu.nus.iss.day13revision.models.PersonForm;
 import sg.edu.nus.iss.day13revision.models.PersonModel;
 import sg.edu.nus.iss.day13revision.services.PersonService;
 import java.util.ArrayList;
@@ -46,5 +48,12 @@ public class PersonController {
        personList = perSvc.getPersons();
         model.addAttribute("persons",personList);
         return "personList";
+    }
+    @RequestMapping(value = "/addPerson",method = RequestMethod.GET)
+    public String showAddPerson(Model model){
+        PersonForm pForm = new PersonForm();
+        model.addAttribute("personForm", pForm);
+
+        return "addPerson";
     }
 }
