@@ -1,3 +1,4 @@
+//form handles entity that comes in as information, will be distributed into different entities
 package sg.edu.nus.iss.day13revision.models;
 
 public class PersonForm {
