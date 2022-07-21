@@ -4,7 +4,10 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.DefaultApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
+import javax.swing.*;
 import java.util.Collections;
 
 @SpringBootApplication
@@ -20,6 +23,15 @@ public class Day13revisionApplication {
 		}
 		app.setDefaultProperties(
 				Collections.singletonMap("server.port", port));
+
+		app.run(args);
+	}
+	@Bean
+	public CommonsRequestLoggingFilter log(){
+		CommonsRequestLoggingFilter logger = new CommonsRequestLoggingFilter();
+		logger.setIncludeClientInfo(true);
+		logger.setIncludeQueryString(true);
+		return logger;
 	}
 
 }
