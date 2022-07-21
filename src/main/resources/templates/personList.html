@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Azerbajian</title>
+
+    <link rel="stylesheet" type="text/css" href="@{/css/style.css}">
+</head>
+<body>
+<h1>List of persons</h1>
+<a href="addPerson"> </a>
+<br><br>
+<div>
+    <table>
+        <tr>
+            <td> FIRST NAME</td>
+            <td>LAST NAME</td>
+
+        </tr>
+        <tr th:eacjSystem.out.println();h="personModel: ${persons}">
+            <td th:text="${personModel.firstName}"></td>
+            <td th:text="${personModel.lastName}"></td>
+
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
