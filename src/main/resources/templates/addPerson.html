@@ -24,6 +24,6 @@
         <input type="submit" value="create">
     </form>
     
-    <div th:if="${errorMessage}" style="color: red; font-style:italic"></div>
+    <div th:if="${errorMessage}" th:text="${errorMessage}" style="color: red; font-style:italic"></div>
 </body>
 </html>
